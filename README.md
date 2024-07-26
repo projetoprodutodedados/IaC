@@ -46,13 +46,48 @@ helm repo update
 ### 3. Deploy dos Serviços
 
 3.1. Deploy do PostgreSQL:
+
+Você pode personalizar ainda mais a instalação do PostgreSQL usando um arquivo `values.yaml`:
+```
+postgresqlUsername: myUser
+postgresqlPassword: myPassword
+postgresqlDatabase: myDatabase
+persistence:
+  enabled: true
+  size: 8Gi
+```
+
+E então instalar o PostgreSQL com o arquivo de valores:
 ```bash
-helm install meu-postgres bitnami/postgresql
+helm install my-postgresql bitnami/postgresql -f values.yaml
 ```
 
 3.2. Deploy do Airflow:
+
+Você pode configurar o Airflow através do `values.yaml` para ajustar as configurações de acordo com suas necessidades.
+
+Exemplo de `values.yaml` para Airflow:
+
+```
+executor: "CeleryExecutor"
+airflow:
+  image:
+    repository: apache/airflow
+    tag: "2.1.2"
+  config:
+    AIRFLOW__CORE__LOAD_EXAMPLES: "False"
+    AIRFLOW__CORE__EXECUTOR: "CeleryExecutor"
+    AIRFLOW__CELERY__BROKER_URL: "redis://redis:6379/0"
+    AIRFLOW__CELERY__RESULT_BACKEND: "db+postgresql://airflow:airflow@postgresql/airflow"
+redis:
+  enabled: true
+postgresql:
+  enabled: true
+```
+
+Aplique o `values.yaml`:
 ```bash
-helm install meu-airflow stable/airflow
+helm install airflow apache-airflow/airflow -f values.yaml --namespace airflow
 ```
 
 3.3. Deploy do Nginx:
@@ -66,6 +101,65 @@ kubectl apply --validate=false -f https://github.com/jetstack/cert-manager/relea
 helm install cert-manager jetstack/cert-manager --namespace cert-manager --create-namespace
 ```
 
+3.4.1. Configurar um Issuer ou ClusterIssuer:
+
+Você precisa configurar um Issuer ou ClusterIssuer para gerenciar os certificados. Para isso, crie o arquivo `cluster-issuer.yaml`:
+
+```
+apiVersion: cert-manager.io/v1
+kind: ClusterIssuer
+metadata:
+  name: letsencrypt-prod
+spec:
+  acme:
+    server: https://acme-v02.api.letsencrypt.org/directory
+    email: your-email@example.com
+    privateKeySecretRef:
+      name: letsencrypt-prod
+    solvers:
+    - http01:
+        ingress:
+          class: nginx
+```
+
+Aplique o ClusterIssuer:
+```bash
+kubectl apply -f cluster-issuer.yaml
+```
+
+3.4.2. Configurar o Ingress para HTTPS
+Crie o aqruivo `ingress.yaml` para configuração de Ingress para uma aplicação com HTTPS:
+```
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: dashboard-backend-ingress
+  annotations:
+    cert-manager.io/cluster-issuer: "letsencrypt-prod"
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  tls:
+  - hosts:
+    - your-domain.com
+    secretName: dashboard-backend-tls
+  rules:
+  - host: your-domain.com
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: dashboard-backend
+            port:
+              number: 5000
+```
+
+Aplique o Ingress:
+```bash
+kubectl apply -f ingress.yaml
+```
+
 3.5. Deploy do Grafana:
 ```bash
 helm install meu-grafana stable/grafana
@@ -74,6 +168,11 @@ helm install meu-grafana stable/grafana
 3.6. Deploy do Prometheus:
 ```bash
 helm install meu-prometheus stable/prometheus
+```
+
+Para acessar o Prometheus, você pode usar o kubectl port-forward:
+```bash
+kubectl port-forward svc/prometheus-server 9090:80
 ```
 
 3.7. Deploy do Kubeflow:
