@@ -116,12 +116,6 @@ kubectl create secret generic bucket-credentials
 aws --endpoint-url=http://localhost:4566 s3 mb s3://meu-bucket
 ```
 
-### 6. Configuração do ETL
-6.1. Deploy do ETL:
-```bash
-kubectl apply -f k8s/etl-deployment.yaml
-```
-
 ## Referências
 - [Documentação do Kind](https://kind.sigs.k8s.io/)
 - [Documentação do Helm](https://helm.sh/docs/)
