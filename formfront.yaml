@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: form-frontend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: form-frontend
+  template:
+    metadata:
+      labels:
+        app: form-frontend
+    spec:
+      containers:
+      - name: form-frontend
+        image: node:14
+        command: ["npm", "run", "dev"]
+        ports:
+        - containerPort: 3001
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: form-frontend
+spec:
+  selector:
+    app: form-frontend
+  ports:
+    - protocol: TCP
+      port: 3001
+      targetPort: 3001

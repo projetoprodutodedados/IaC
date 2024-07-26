@@ -1,0 +1,43 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: s3
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: s3
+  template:
+    metadata:
+      labels:
+        app: s3
+    spec:
+      containers:
+      - name: s3
+        image: minio/minio
+        env:
+        - name: MINIO_ACCESS_KEY
+          value: "minio"
+        - name: MINIO_SECRET_KEY
+          value: "minio123"
+        command: ["server", "/data"]
+        ports:
+        - containerPort: 9000
+        volumeMounts:
+        - mountPath: /data
+          name: s3-data
+      volumes:
+      - name: s3-data
+        emptyDir: {}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: s3
+spec:
+  selector:
+    app: s3
+  ports:
+    - protocol: TCP
+      port: 9000
+      targetPort: 9000
