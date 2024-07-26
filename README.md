@@ -94,11 +94,26 @@ kubectl apply -f k8s/formulario-backend-deployment.yaml
 ```
 
 ### 5. Configuração do Bucket
-5.1. Crie um bucket no seu provedor de armazenamento de dados (ex: AWS S3, Google Cloud Storage).
-
-5.2. Configure as credenciais de acesso no Kubernetes:
+5.1. Adicionar repositório do LocalStack ao Helm:
 ```bash
-kubectl create secret generic bucket-credentials --from-literal=access-key=<ACCESS_KEY> --from-literal=secret-key=<SECRET_KEY>
+helm repo add localstack https://helm.localstack.cloud
+helm repo update
+```
+
+5.2. Deploy do LocalStack:
+```bash
+helm install localstack localstack/localstack
+```
+
+5.3. Configure as credenciais de acesso no Kubernetes:
+```bash
+kubectl create secret generic bucket-credentials 
+--from-literal=access-key=test --from-literal=secret-key=test
+```
+
+5.4. Crie o bucket no LocalStack:
+```bash
+aws --endpoint-url=http://localhost:4566 s3 mb s3://meu-bucket
 ```
 
 ### 6. Configuração do ETL
