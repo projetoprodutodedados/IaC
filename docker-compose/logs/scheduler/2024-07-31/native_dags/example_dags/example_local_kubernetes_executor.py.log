@@ -443,3 +443,80 @@
 [2024-07-31T16:45:58.664+0000] {logging_mixin.py:188} INFO - [2024-07-31T16:45:58.664+0000] {dag.py:3089} INFO - Sync 1 DAGs
 [2024-07-31T16:45:58.682+0000] {logging_mixin.py:188} INFO - [2024-07-31T16:45:58.682+0000] {dag.py:3947} INFO - Setting next_dagrun for example_local_kubernetes_executor to None, run_after=None
 [2024-07-31T16:45:58.714+0000] {processor.py:183} INFO - Processing /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_local_kubernetes_executor.py took 0.113 seconds
+[2024-07-31T21:22:52.672+0000] {processor.py:161} INFO - Started process (PID=79) to work on /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2024-07-31T21:22:52.674+0000] {processor.py:830} INFO - Processing file /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_local_kubernetes_executor.py for tasks to queue
+[2024-07-31T21:22:52.676+0000] {logging_mixin.py:188} INFO - [2024-07-31T21:22:52.676+0000] {dagbag.py:545} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2024-07-31T21:22:52.691+0000] {processor.py:840} INFO - DAG(s) 'example_local_kubernetes_executor' retrieved from /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2024-07-31T21:22:52.995+0000] {logging_mixin.py:188} INFO - [2024-07-31T21:22:52.995+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-31T21:22:53.017+0000] {logging_mixin.py:188} INFO - [2024-07-31T21:22:53.016+0000] {dag.py:3947} INFO - Setting next_dagrun for example_local_kubernetes_executor to None, run_after=None
+[2024-07-31T21:22:53.047+0000] {processor.py:183} INFO - Processing /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_local_kubernetes_executor.py took 0.383 seconds
+[2024-07-31T21:23:23.866+0000] {processor.py:161} INFO - Started process (PID=137) to work on /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2024-07-31T21:23:23.868+0000] {processor.py:830} INFO - Processing file /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_local_kubernetes_executor.py for tasks to queue
+[2024-07-31T21:23:23.870+0000] {logging_mixin.py:188} INFO - [2024-07-31T21:23:23.869+0000] {dagbag.py:545} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2024-07-31T21:23:23.884+0000] {processor.py:840} INFO - DAG(s) 'example_local_kubernetes_executor' retrieved from /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2024-07-31T21:23:23.955+0000] {logging_mixin.py:188} INFO - [2024-07-31T21:23:23.954+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-31T21:23:23.972+0000] {logging_mixin.py:188} INFO - [2024-07-31T21:23:23.972+0000] {dag.py:3947} INFO - Setting next_dagrun for example_local_kubernetes_executor to None, run_after=None
+[2024-07-31T21:23:24.003+0000] {processor.py:183} INFO - Processing /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_local_kubernetes_executor.py took 0.149 seconds
+[2024-07-31T21:23:54.640+0000] {processor.py:161} INFO - Started process (PID=195) to work on /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2024-07-31T21:23:54.642+0000] {processor.py:830} INFO - Processing file /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_local_kubernetes_executor.py for tasks to queue
+[2024-07-31T21:23:54.646+0000] {logging_mixin.py:188} INFO - [2024-07-31T21:23:54.645+0000] {dagbag.py:545} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2024-07-31T21:23:54.659+0000] {processor.py:840} INFO - DAG(s) 'example_local_kubernetes_executor' retrieved from /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2024-07-31T21:23:54.751+0000] {logging_mixin.py:188} INFO - [2024-07-31T21:23:54.750+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-31T21:23:54.802+0000] {logging_mixin.py:188} INFO - [2024-07-31T21:23:54.802+0000] {dag.py:3947} INFO - Setting next_dagrun for example_local_kubernetes_executor to None, run_after=None
+[2024-07-31T21:23:55.141+0000] {processor.py:183} INFO - Processing /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_local_kubernetes_executor.py took 0.518 seconds
+[2024-07-31T21:24:26.736+0000] {processor.py:161} INFO - Started process (PID=253) to work on /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2024-07-31T21:24:26.743+0000] {processor.py:830} INFO - Processing file /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_local_kubernetes_executor.py for tasks to queue
+[2024-07-31T21:24:26.746+0000] {logging_mixin.py:188} INFO - [2024-07-31T21:24:26.745+0000] {dagbag.py:545} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2024-07-31T21:24:26.755+0000] {processor.py:840} INFO - DAG(s) 'example_local_kubernetes_executor' retrieved from /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2024-07-31T21:24:26.825+0000] {logging_mixin.py:188} INFO - [2024-07-31T21:24:26.824+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-31T21:24:26.846+0000] {logging_mixin.py:188} INFO - [2024-07-31T21:24:26.846+0000] {dag.py:3947} INFO - Setting next_dagrun for example_local_kubernetes_executor to None, run_after=None
+[2024-07-31T21:24:26.887+0000] {processor.py:183} INFO - Processing /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_local_kubernetes_executor.py took 0.164 seconds
+[2024-07-31T21:24:57.082+0000] {processor.py:161} INFO - Started process (PID=311) to work on /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2024-07-31T21:24:57.083+0000] {processor.py:830} INFO - Processing file /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_local_kubernetes_executor.py for tasks to queue
+[2024-07-31T21:24:57.084+0000] {logging_mixin.py:188} INFO - [2024-07-31T21:24:57.084+0000] {dagbag.py:545} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2024-07-31T21:24:57.092+0000] {processor.py:840} INFO - DAG(s) 'example_local_kubernetes_executor' retrieved from /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2024-07-31T21:24:57.143+0000] {logging_mixin.py:188} INFO - [2024-07-31T21:24:57.143+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-31T21:24:57.162+0000] {logging_mixin.py:188} INFO - [2024-07-31T21:24:57.162+0000] {dag.py:3947} INFO - Setting next_dagrun for example_local_kubernetes_executor to None, run_after=None
+[2024-07-31T21:24:57.190+0000] {processor.py:183} INFO - Processing /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_local_kubernetes_executor.py took 0.114 seconds
+[2024-07-31T21:25:55.229+0000] {processor.py:161} INFO - Started process (PID=376) to work on /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2024-07-31T21:25:55.235+0000] {processor.py:830} INFO - Processing file /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_local_kubernetes_executor.py for tasks to queue
+[2024-07-31T21:25:55.243+0000] {logging_mixin.py:188} INFO - [2024-07-31T21:25:55.242+0000] {dagbag.py:545} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2024-07-31T21:25:55.274+0000] {processor.py:840} INFO - DAG(s) 'example_local_kubernetes_executor' retrieved from /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2024-07-31T21:25:55.476+0000] {logging_mixin.py:188} INFO - [2024-07-31T21:25:55.475+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-31T21:25:55.502+0000] {logging_mixin.py:188} INFO - [2024-07-31T21:25:55.502+0000] {dag.py:3947} INFO - Setting next_dagrun for example_local_kubernetes_executor to None, run_after=None
+[2024-07-31T21:25:55.617+0000] {processor.py:183} INFO - Processing /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_local_kubernetes_executor.py took 0.402 seconds
+[2024-07-31T21:26:26.457+0000] {processor.py:161} INFO - Started process (PID=434) to work on /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2024-07-31T21:26:26.458+0000] {processor.py:830} INFO - Processing file /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_local_kubernetes_executor.py for tasks to queue
+[2024-07-31T21:26:26.461+0000] {logging_mixin.py:188} INFO - [2024-07-31T21:26:26.460+0000] {dagbag.py:545} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2024-07-31T21:26:26.469+0000] {processor.py:840} INFO - DAG(s) 'example_local_kubernetes_executor' retrieved from /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2024-07-31T21:26:26.532+0000] {logging_mixin.py:188} INFO - [2024-07-31T21:26:26.532+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-31T21:26:26.551+0000] {logging_mixin.py:188} INFO - [2024-07-31T21:26:26.551+0000] {dag.py:3947} INFO - Setting next_dagrun for example_local_kubernetes_executor to None, run_after=None
+[2024-07-31T21:26:26.590+0000] {processor.py:183} INFO - Processing /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_local_kubernetes_executor.py took 0.142 seconds
+[2024-07-31T21:26:56.800+0000] {processor.py:161} INFO - Started process (PID=492) to work on /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2024-07-31T21:26:56.800+0000] {processor.py:830} INFO - Processing file /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_local_kubernetes_executor.py for tasks to queue
+[2024-07-31T21:26:56.802+0000] {logging_mixin.py:188} INFO - [2024-07-31T21:26:56.802+0000] {dagbag.py:545} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2024-07-31T21:26:56.812+0000] {processor.py:840} INFO - DAG(s) 'example_local_kubernetes_executor' retrieved from /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2024-07-31T21:26:56.862+0000] {logging_mixin.py:188} INFO - [2024-07-31T21:26:56.861+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-31T21:26:56.878+0000] {logging_mixin.py:188} INFO - [2024-07-31T21:26:56.877+0000] {dag.py:3947} INFO - Setting next_dagrun for example_local_kubernetes_executor to None, run_after=None
+[2024-07-31T21:26:56.904+0000] {processor.py:183} INFO - Processing /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_local_kubernetes_executor.py took 0.111 seconds
+[2024-07-31T21:27:27.001+0000] {processor.py:161} INFO - Started process (PID=550) to work on /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2024-07-31T21:27:27.003+0000] {processor.py:830} INFO - Processing file /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_local_kubernetes_executor.py for tasks to queue
+[2024-07-31T21:27:27.007+0000] {logging_mixin.py:188} INFO - [2024-07-31T21:27:27.006+0000] {dagbag.py:545} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2024-07-31T21:27:27.020+0000] {processor.py:840} INFO - DAG(s) 'example_local_kubernetes_executor' retrieved from /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2024-07-31T21:27:27.118+0000] {logging_mixin.py:188} INFO - [2024-07-31T21:27:27.117+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-31T21:27:27.147+0000] {logging_mixin.py:188} INFO - [2024-07-31T21:27:27.146+0000] {dag.py:3947} INFO - Setting next_dagrun for example_local_kubernetes_executor to None, run_after=None
+[2024-07-31T21:27:27.185+0000] {processor.py:183} INFO - Processing /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_local_kubernetes_executor.py took 0.193 seconds
+[2024-07-31T21:27:57.266+0000] {processor.py:161} INFO - Started process (PID=608) to work on /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2024-07-31T21:27:57.267+0000] {processor.py:830} INFO - Processing file /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_local_kubernetes_executor.py for tasks to queue
+[2024-07-31T21:27:57.268+0000] {logging_mixin.py:188} INFO - [2024-07-31T21:27:57.268+0000] {dagbag.py:545} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2024-07-31T21:27:57.276+0000] {processor.py:840} INFO - DAG(s) 'example_local_kubernetes_executor' retrieved from /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2024-07-31T21:27:57.343+0000] {logging_mixin.py:188} INFO - [2024-07-31T21:27:57.342+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-31T21:27:57.360+0000] {logging_mixin.py:188} INFO - [2024-07-31T21:27:57.360+0000] {dag.py:3947} INFO - Setting next_dagrun for example_local_kubernetes_executor to None, run_after=None
+[2024-07-31T21:27:57.382+0000] {processor.py:183} INFO - Processing /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_local_kubernetes_executor.py took 0.122 seconds
+[2024-07-31T21:29:01.036+0000] {processor.py:161} INFO - Started process (PID=667) to work on /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2024-07-31T21:29:01.037+0000] {processor.py:830} INFO - Processing file /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_local_kubernetes_executor.py for tasks to queue
+[2024-07-31T21:29:01.039+0000] {logging_mixin.py:188} INFO - [2024-07-31T21:29:01.039+0000] {dagbag.py:545} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2024-07-31T21:29:01.048+0000] {processor.py:840} INFO - DAG(s) 'example_local_kubernetes_executor' retrieved from /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2024-07-31T21:29:01.091+0000] {logging_mixin.py:188} INFO - [2024-07-31T21:29:01.091+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2024-07-31T21:29:01.109+0000] {logging_mixin.py:188} INFO - [2024-07-31T21:29:01.108+0000] {dag.py:3947} INFO - Setting next_dagrun for example_local_kubernetes_executor to None, run_after=None
+[2024-07-31T21:29:01.136+0000] {processor.py:183} INFO - Processing /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_local_kubernetes_executor.py took 0.108 seconds
